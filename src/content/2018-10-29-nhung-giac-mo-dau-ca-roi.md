@@ -1,0 +1,10 @@
+---
+title: "Những giấc mơ, đâu cả rồi ?"
+date: "2018-10-29"
+draft: false
+path: "/blog/nhung-giac-mo-dau-ca-roi"
+---
+
+Hãy mơ về một giấc mơ và đặt niềm tin cao nhất vào nó lên cao nhất có thể, thì may ra giấc mơ đó còn có thật.<br>
+Giấc mơ của một thằng sinh viên ngồi một mình trong quán vắng, nghe tiếng nói chuyện xung quanh, và cả bên đường, nhìn bóng đèn quả nhót treo trên trần, cây cột chiếu thứ ánh sáng vàng như cái bếp nhà xưa lạnh lẽo. Bàn ghế vắng tanh, cũng chả hiểu sao, chắc giờ này mọi người còn đang chuẩn bị bữa tối. Chủ quán lâu lâu lại “tạt cánh" qua, hỏi dạo này đi đâu. Cười, dạ không đi đâu cả, chỉ là đi xa hơi nhiều, nên ít ghé thăm. Rồi lại gục đầu xuống. Trong ly cà phê sữa cả tiếng đồng hồ không động tới, đá chảy ra thành một thứ nước nhờ nhơ. Mặt bàn cũng ướt, lờ mờ bóng một cái thấy đầu tóc dài bù xù đã bao nhiều ngày không gội.<br>
+Giấc mơ đứng bên cửa sổ phòng trọ một buổi chiều mưa giông, nhìn nước chảy thành dòng ngoài cửa. Đất ta nắng lắm, mưa nhiều. Nước chảy thành dòng, cuốn theo lá mục, rác rến, đổ chảy ra đường. Người co cụm lại như những con sâu lá, đi nghiêng ngả dưới mưa. Chớp lóa, sấm rền, bầu trời mù mịt.<br>
