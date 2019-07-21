@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Hieu Hoang`,
-    description: `A minimal blog starter built with Gatsbyjs. The needed Gatsby files are included.`,
+    description: `My simple blog using Gatsby. This is a place where i can share my thoughts with you.`,
     author: `@hyperion0201`,
   },
   plugins: [
