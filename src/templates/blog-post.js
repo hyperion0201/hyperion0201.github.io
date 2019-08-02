@@ -3,6 +3,9 @@ import { graphql } from "gatsby"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { DiscussionEmbed } from "disqus-react"
+
+
 
 const Content = styled.div`
   margin: 0 auto;
@@ -53,6 +56,12 @@ const MarkdownContent = styled.div`
 
 export default ({ data }) => {
   const post = data.markdownRemark
+    console.log(post.fields.slug);
+  const disqusConfig = {
+    shortname: "hyperion0201",
+    config: { identifier: post.fields.slug, 
+    title: post.frontmatter.title },
+  }
   return (
     <Layout>
       <SEO
@@ -66,6 +75,7 @@ export default ({ data }) => {
         </HeaderDate>
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
+      <DiscussionEmbed {...disqusConfig}/>
     </Layout>
   )
 }
@@ -84,6 +94,7 @@ export const pageQuery = graphql`
         readingTime {
           text
         }
+        slug
       }
     }
   }

@@ -15,17 +15,17 @@ const OuterContainer = styled.div`
   height: 78vh;
 `
 
-const Description = styled.p`
+export const Description = styled.p`
   padding: 0;
   margin-bottom: 1rem;
   font-size: 1rem;
 `
 
-const NameHeader = styled.h1`
+export const NameHeader = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 0;
 `
-const Avatar = styled.img`
+export const Avatar = styled.img`
   border-radius: 50%;
   box-shadow: 0px 0px 10px 0px rgba(39,49,65,0.1);
 
