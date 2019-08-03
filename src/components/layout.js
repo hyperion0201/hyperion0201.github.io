@@ -1,9 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
 
 import React from "react"
 import PropTypes from "prop-types"
@@ -50,7 +44,7 @@ const Layout = ({ children }) => (
           <Footer>
             © {new Date().getFullYear()}, Built with
             {` `}
-            <GatsbyLink href="https://www.gatsbyjs.org">Gatsby.</GatsbyLink>
+            <GatsbyLink href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby.</GatsbyLink>
           </Footer>
         </Content>
        

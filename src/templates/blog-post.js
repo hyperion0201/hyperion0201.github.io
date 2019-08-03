@@ -4,13 +4,13 @@ import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { DiscussionEmbed } from "disqus-react"
-
+import { Author } from '../pages/blog'
 
 
 const Content = styled.div`
   margin: 0 auto;
   max-width: 860px;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 3.5rem;
 `
 
 const MarkedHeader = styled.h1`
@@ -56,6 +56,7 @@ const MarkdownContent = styled.div`
 
 export default ({ data }) => {
   const post = data.markdownRemark
+  const social = data.site.siteMetadata.social;
     console.log(post.fields.slug);
   const disqusConfig = {
     shortname: "hyperion0201",
@@ -68,20 +69,33 @@ export default ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Author social={social}/>
       <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
         <HeaderDate>
           {post.frontmatter.date} - {post.fields.readingTime.text}
         </HeaderDate>
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
+        <DiscussionEmbed {...disqusConfig}/>
       </Content>
-      <DiscussionEmbed {...disqusConfig}/>
+      
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
   query($path: String!) {
+    site {
+      siteMetadata {
+        social {
+          facebook
+          instagram
+          github
+          twitter
+          linkedin
+        }
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       excerpt(pruneLength: 160)

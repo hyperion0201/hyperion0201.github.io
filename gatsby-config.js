@@ -3,6 +3,13 @@ module.exports = {
     title: `Hieu Hoang`,
     description: `My simple blog using Gatsby. This is a place where i can share my thoughts with you.`,
     author: `@hyperion0201`,
+    social: {
+      facebook: `https://facebook.com/hyperion0201`,
+      twitter: `https://twitter.com.hyperion0201`,
+      instagram: `https://instagram.com/hyperion0201`,
+      linkedin: `https://linkedin.com/in/hyperion0201`,
+      github: `https://github.com/hyperion0201`
+    }
   },
   plugins: [
    

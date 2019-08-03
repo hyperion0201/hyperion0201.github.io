@@ -2,19 +2,23 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 import avatar from "../components/avatar.jpg"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+const SocialLink = styled.div`
+  padding-right: 10px;
+`
 const AuthorContainer = styled.div`
   position: fixed;
   margin: 0 auto;
   width: 250px;
   padding-top: 3.5rem;
-  padding-right: 1rem;
   
+  @media (max-width: 1250px) {
+    display: none;
+  }
 `
 const Avatar = styled.img`
   border-radius: 50%;
@@ -56,28 +60,41 @@ const ReadingTime = styled.h5`
   color: #606060;
   margin-bottom: 10px;
 `
-const Author = () => {
+
+ export const Author = ({ social }) => {
   return (
     <AuthorContainer className="author-container">
       <div style={{ textAlign: `center`, width: `auto`, marginTop: `30px` }}>
         <Avatar src={avatar} alt="avatar" />
         <br></br>
-        <h3 style={{marginBottom: `10px`}}>Hieu Hoang</h3>
-        
-        <i class="fab fa-facebook-square" aria-hidden="true"></i>
-        <p>Software Enginner, Product</p>
-       
+        <h3 style={{ marginBottom: `10px` }}>Hieu Hoang</h3>
+
+        <a href={social.facebook} target="_blank" rel="noopener noreferrer">
+          <SocialLink className="fab fa-facebook-square" aria-hidden="true" />
+        </a>
+        <a href={social.instagram} target="_blank" rel="noopener noreferrer">
+          <SocialLink className="fab fa-instagram" />
+        </a>
+        <a href={social.github} target="_blank" rel="noopener noreferrer">
+          <SocialLink className="fab fa-github" />
+        </a>
+        <a href={social.linkedin} target="_blank" rel="noopener noreferrer">
+          <SocialLink className="fab fa-linkedin" />
+        </a>
+   
+        <p style={{marginTop: `20px`}}>Software Enginner, Product</p>
       </div>
-      
     </AuthorContainer>
   )
 }
 const IndexPage = ({ data }) => {
+  const social = data.site.siteMetadata.social
+
   return (
     <Layout>
       <SEO title="Blog" />
       <BlogContainer className="blog-container">
-        <Author />
+        <Author social={social} />
         <Content>
           <h1>Writings & Ramblings</h1>
           {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -111,6 +128,13 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        social {
+          facebook
+          twitter
+          github
+          instagram
+          linkedin
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
