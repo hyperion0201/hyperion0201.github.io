@@ -7,11 +7,9 @@ import styled from "@emotion/styled"
 import Header from "./header"
 import "./layout.css"
 import Particles from './particles-wrapper'
-const Content = styled.div`
+const MainContent = styled.div`
   margin: 0 auto;
-  
-  padding: 0 1.0875rem 1rem;
-  padding-top: 0;
+  padding: 1 rem;
 `
 
 const GatsbyLink = styled.a`
@@ -39,14 +37,14 @@ const Layout = ({ children }) => (
       <>
        <Particles/>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Content>
+        <MainContent>
           <main>{children}</main>
           <Footer>
             © {new Date().getFullYear()}, Built with
             {` `}
             <GatsbyLink href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby.</GatsbyLink>
           </Footer>
-        </Content>
+        </MainContent>
        
       </>
     )}

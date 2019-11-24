@@ -33,7 +33,7 @@ const BlogContainer = styled.div`
 const Content = styled.div`
   margin: 0 auto;
   max-width: 860px;
-  padding: 1.5rem 3.5rem;
+  padding: 1.5rem 1.5rem;
 `
 
 const ArticleDate = styled.h5`

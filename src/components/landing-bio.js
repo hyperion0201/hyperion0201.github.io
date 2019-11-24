@@ -6,7 +6,9 @@ import avatar from './avatar.jpg';
 const Container = styled.div`
   text-align: center;
 `
-
+const SocialLink = styled.div`
+  padding-right: 10px;
+`
 const OuterContainer = styled.div`
   display: flex;
   align-items: center;
@@ -53,6 +55,18 @@ const LandingBio = () => (
           <Avatar src={avatar} width="150" height="150"/>
           <NameHeader>{data.site.siteMetadata.title}</NameHeader>
           <Description>Software Engineer, Product</Description>
+          <a href={`https://facebook.com/hyperion0201`} target="_blank" rel="noopener noreferrer">
+          <SocialLink className="fab fa-facebook-square" aria-hidden="true" />
+        </a>
+        <a href={`https://instagram.com/hyperion0201`} target="_blank" rel="noopener noreferrer">
+          <SocialLink className="fab fa-instagram" />
+        </a>
+        <a href={`https://github.com/hyperion0201`} target="_blank" rel="noopener noreferrer">
+          <SocialLink className="fab fa-github" />
+        </a>
+        <a href={`https://linkedin.com/in/hyperion0201`} target="_blank" rel="noopener noreferrer">
+          <SocialLink className="fab fa-linkedin" />
+        </a>
         </Container>
       </OuterContainer>
     )}
